@@ -1,0 +1,66 @@
+# APinchofDill config for mkdocs documentation site generator
+
+site_name: Riverology Docs
+site_url: https://galidar.github.io/riverology-docs
+
+# Repository
+repo_name: Galidar/riverology-docs
+repo_url: https://github.com/Galidar/riverology-docs
+edit_uri: ""
+
+# Plugins
+plugins:
+  - offline
+  - glightbox
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+theme:
+  favicon: ./assets/images/logo.jpg
+  logo: ./assets/images/logo.jpg
+  name: material
+  custom_dir: overrides
+  palette:
+    primary: black
+    scheme: slate
+  features:
+    - navigation.path
+    - navigation.tabs
+    - navigation.path
+    - navigation.footer
+    - navigation.expand
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.indexes
+
+# Page navigation
+nav:
+  - Home: index.md
+  - Getting started:
+    - ./getting-started/index.md
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - abbr
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+extra:
+  annotate:
+    json: [.s2]
+  version:
+    provider: mike
+extra_css:
+  - ./assets/stylesheets/extra.css

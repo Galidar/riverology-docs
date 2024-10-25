@@ -1,6 +1,6 @@
-# Oceanology MkDocs
+# Riverology Docs
 
-Documentation site for Oceanology built with MkDocs and Material theme.
+Documentation site for Riverology built with MkDocs and Material theme.
 
 ## Setup
 
